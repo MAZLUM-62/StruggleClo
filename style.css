@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Raleway:ital@1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-family: 'Bungee Shade', cursive;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+/** DESIGN HEADER **/ 
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #777777;
+}
+
+.navbar-logo{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar-links{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+.navbar-links a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.mnavbar{
+    display: none;
+    cursor: pointer;
+}
+
+.mnavbar div{
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width:1024px){
+    .navbar-links{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:768px){
+    body {
+        overflow-x: hidden;
+    }
+    .navbar-links{
+        position: absolute;
+        right: 0px;
+        height: 100vh;
+        top: 8vh;
+        background-color: #777777;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 35%;
+        transform: translateX(100%);
+    }
+
+    .navbar-links li{
+        opacity: 0;
+    }
+    .mnavbar{
+        display: block;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%)!important;
+}
+
+@keyframes navbarLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+        color: gray;
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+        color: gray;
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+/** END DESIGN HEADER **/ 
+
+
+/* STARTSEITE DESIGN */
+a {
+    text-decoration: none;
+}
+
+.top {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#startseite {
+    background-image: url(/img/font.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: -1;
+}
+
+#startseite::after{
+    content: '';
+    position: absolute;
+    left:0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .76;
+    z-index: -1;
+}
+
+
+.titel {
+    color: white;
+    text-align: center;
+    justify-content: center;  
+    z-index: +1;
+}
+
+.titel h1 {
+    font-size: 70px;
+    letter-spacing: 4px;
+}
+
+.titel h2 { 
+    font-size: 30px;
+    letter-spacing: 4px;
+    margin-top: 20px;
+}
+
+.titel h3 { 
+    font-size: 30px;
+    letter-spacing: 4px;
+    margin-top: 20px;
+}
+
+/* BUTTON */
+
+/* END BUTTON */
